@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pictures
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pictures
+  template:
+    metadata:
+      labels:
+        app: pictures
+    spec:
+      containers:
+        - name: pictures
+          image: pictures:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8082
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pictures
+spec:
+  selector:
+    app: pictures
+  ports:
+    - port: 8082
+      targetPort: 8082
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: songs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: songs
+  template:
+    metadata:
+      labels:
+        app: songs
+    spec:
+      containers:
+        - name: songs
+          image: songs:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8081
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: songs
+spec:
+  selector:
+    app: songs
+  ports:
+    - port: 8081
+      targetPort: 8081
