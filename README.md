@@ -1,6 +1,9 @@
 # Back-end-Development-Capstone
 
-Djirection is a Django band website that integrates the Pictures and Songs Flask services. This project extends the [IBM Skills Network course template](https://github.com/ibm-developer-skills-network/sfvih-Back-end-Development-Capstone), licensed under Apache 2.0. The views, model fields, URL routes, migrations, and container deployment files have been completed.
+This is the public README for my **Back-end-Development-Capstone** repository:
+https://github.com/ad1let-1/Back-end-Development-Capstone/blob/main/README.md
+
+Djirection is a Django band website that integrates the Pictures and Songs Flask services. Based on the IBM Skills Network course template, licensed under Apache 2.0. The views, model fields, URL routes, migrations, and container deployment files have been completed.
 
 ## Run locally
 
